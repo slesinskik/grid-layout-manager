@@ -1,8 +1,8 @@
 {
     "package": {
-        "name": "com.kamilslesinski.gridlayoutmanager:gridlayoutmanager",
+        "name": "com.kamilslesinski.gridlayoutmanager",
         "repo": "maven",
-        "subject": "slesinskik",
+        "subject": "slesinskik"
     },
 
     "version": {

@@ -1,7 +1,7 @@
 package com.kamilslesinski.gridlayoutmanager;
 
 /**
- * {@inheritDoc} This {@link DataProvider2D} gives 2D access to {@link Item Items}.
+ * {@inheritDoc} This {@link DataProvider2D} provides 2D access to {@link Item Items}.
  *
  * @author Kamil Ślesiński (slesinskik@gmail.com)
  * @since 2016/04/07

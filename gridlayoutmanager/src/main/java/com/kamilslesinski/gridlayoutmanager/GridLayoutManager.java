@@ -20,11 +20,11 @@ import java.util.Queue;
 import hugo.weaving.DebugLog;
 
 /**
- * A layout manager that allows to display views ({@link Item}) in a staggered grid layout.
- * This layout can be scrolled both horizontally and vertically.
+ * A layout manager that allows to display views in a grid layout.
+ * This layout can be scrolled both horizontally and vertically and the position is defined by {@link Item}, not by the layout manager.
  * Views ({@link Item}) belong to strips and can be displayed in two orientations: {@link GridLayoutManager#ORIENTATION_HORIZONTAL} or {@link GridLayoutManager#ORIENTATION_VERTICAL}.
  * This layout manager, for performance reasons, assumes that {@link Item GridItems} provided by {@link DataSource} are ordered and do not overlap.
- * <p/>
+ *
  * An example use of this layout is a TV Guide.
  *
  * @author Kamil Ślesiński (slesinskik@gmail.com)

@@ -6,7 +6,9 @@ import android.support.annotation.Size;
 /**
  * This class uses {@link DataProvider} to provide data to {@link GridLayoutManager}.
  * It reads all the {@link Item Items} data from {@link DataProvider} (either {@link DataProvider1D} or {@link DataProvider2D})
- * and creates appropriate in-memory mappings for {@link GridLayoutManager} to allow fast {@link Item} access.
+ * and creates appropriate in-memory mappings.
+ * This class has O(n+m) memory complexity, where n is the number of items in {@link DataProvider} and m is the number of strips.
+ * This is required for fast (O(1)) mapping between 1D and 2D coordinates.
  *
  * @author Kamil Ślesiński (slesinskik@gmail.com)
  * @since 2016/04/12

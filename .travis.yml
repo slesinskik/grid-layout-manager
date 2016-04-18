@@ -24,13 +24,6 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
-deploy:
-  provider: bintray
-  file: "descriptor.json"
-  user: BINTRAY-USER
-  key: BINTRAY-API-KEY
-  dry-run: true
-
 script:
   - ./gradlew assembleRelease
 

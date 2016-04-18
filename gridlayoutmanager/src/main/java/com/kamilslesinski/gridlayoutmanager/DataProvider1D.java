@@ -1,7 +1,7 @@
 package com.kamilslesinski.gridlayoutmanager;
 
 /**
- * {@inheritDoc} This {@link DataProvider1D} gives linear (1D) access to {@link Item Items}.
+ * {@inheritDoc} This {@link DataProvider1D} provides linear (1D) access to {@link Item Items}.
  *
  * @author Kamil Ślesiński (slesinskik@gmail.com)
  * @since 2016/04/07

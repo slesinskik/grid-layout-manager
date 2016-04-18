@@ -1,15 +1,36 @@
 buildscript {
     repositories {
+        jcenter()
         mavenCentral()
     }
 
     dependencies {
         classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
     }
 }
 
 apply plugin: 'com.android.library'
 apply plugin: 'com.jakewharton.hugo'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'grid-layout-manager'
+
+    publishedGroupId = 'com.kamilslesinski.gridlayoutmanager'
+    libraryName = 'grid-layout-manager'
+    artifact = 'gridlayoutmanager'
+
+    libraryDescription = 'Grid LayoutManager for RecyclerView'
+
+    siteUrl = 'https://github.com/slesinskik/grid-layout-manager'
+    gitUrl = 'https://github.com/slesinskik/grid-layout-manager.git'
+
+    libraryVersion = '1.0.0'
+}
 
 android {
     compileSdkVersion 23
@@ -20,7 +41,7 @@ android {
         minSdkVersion 9
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
     buildTypes {
         release {
@@ -29,6 +50,8 @@ android {
         }
     }
 }
+
+apply from: 'bintray.gradle'
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])

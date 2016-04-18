@@ -7,7 +7,6 @@ import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.SparseIntArray;
-import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -712,11 +711,10 @@ public class GridLayoutManager extends RecyclerView.LayoutManager {
     /**
      * Sets strip size in dp. Depending on the current orientation, it can either mean height (for {@link #ORIENTATION_HORIZONTAL}) or width (for {@link #ORIENTATION_VERTICAL}).
      *
-     * @param stripSize      - height in DP
-     * @param displayMetrics
+     * @param stripSize - height in DP
      */
-    public void setStripSize(int stripSize, DisplayMetrics displayMetrics) {
-        mStripSize = (int) (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, stripSize, displayMetrics) + 0.5f);
+    public void setStripSize(int stripSize) {
+        mStripSize = getPixels(stripSize);
     }
 
     public static class LayoutParams extends RecyclerView.LayoutParams {

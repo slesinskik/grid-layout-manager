@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private void initializeGridView1() {
         DisplayMetrics dm = getResources().getDisplayMetrics();
         mGridLayoutManager1 = new GridLayoutManager(dm);
-        mGridLayoutManager1.setStripSize(48, dm);
+        mGridLayoutManager1.setStripSize(48);
         mGridLayoutManager1.setMaxStripLength(32000);
         mGridLayoutManager1.setResetListener(new GridLayoutManager.OnResetListener() {
             @Override
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     private void initializeGridView2() {
         DisplayMetrics dm = getResources().getDisplayMetrics();
         mGridLayoutManager2 = new GridLayoutManager(dm);
-        mGridLayoutManager2.setStripSize(48, dm);
+        mGridLayoutManager2.setStripSize(48);
         //mGridLayoutManager2.setMaxStripLength(200);
         mGridLayoutManager2.setDynamicStripLength(true);
         mGridLayoutManager2.setResetListener(new GridLayoutManager.OnResetListener() {
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
     private void initializeGridView3() {
         DisplayMetrics dm = getResources().getDisplayMetrics();
         mGridLayoutManager3 = new GridLayoutManager(dm);
-        mGridLayoutManager3.setStripSize(80, dm);
+        mGridLayoutManager3.setStripSize(80);
         //mGridLayoutManager3.setMaxStripLength(200);
         mGridLayoutManager3.setDynamicStripLength(true);
         mGridLayoutManager3.setResetListener(new GridLayoutManager.OnResetListener() {

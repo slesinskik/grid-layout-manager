@@ -6,12 +6,17 @@ that allows RecyclerView to display views in two dimensional grid.
 ![Screenshot horizontal](https://github.com/slesinskik/grid-layout-manager/raw/develop/wiki/orientation_horizontal.png)
 ![Screenshot vertical](https://github.com/slesinskik/grid-layout-manager/raw/develop/wiki/orientation_vertical.png)
 
+An example, real-life use, can be a TV Guide:
+
+![Screenshot TV Guide](https://github.com/slesinskik/grid-layout-manager/raw/develop/wiki/tv_guide_example.png)
+
+
 ## Using Grid Layout Manager ##
 
 ### Configuration ###
 
 The easiest way to get started is by including the following in
-your project's `build.gradle` file (probably not be available on jcenter() yet, please be patient):
+your project's `build.gradle` file:
 
 ```gradle
 compile 'com.kamilslesinski.gridlayoutmanager:gridlayoutmanager:X.Y.Z'

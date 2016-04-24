@@ -51,7 +51,7 @@ rvc.setMaxRecycledViews(0, POOL_SIZE);
 mRecyclerView.setRecycledViewPool(rvc);
 ```
 
-* creating an instance of DataSource<I> with your DataProvider1D (or DataProvider2D) implementation
+* creating an instance of ```DataSource<I>``` with your DataProvider1D (or DataProvider2D) implementation
 ```
 DataSource<I> dataSource = new DataSource<>();
 dataSource.setDataProvider(yourDataProvider);

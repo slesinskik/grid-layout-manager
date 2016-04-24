@@ -15,6 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".generic.HorizontalGridActivity"/>
+        <activity android:name=".generic.VerticalGridActivity"/>
+        <activity android:name=".tvguide.TVGuideGridActivity"/>
     </application>
 
 </manifest>

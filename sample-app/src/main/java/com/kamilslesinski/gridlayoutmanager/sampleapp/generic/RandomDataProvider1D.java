@@ -1,4 +1,4 @@
-package com.kamilslesinski.gridlayoutmanager.sampleapp;
+package com.kamilslesinski.gridlayoutmanager.sampleapp.generic;
 
 import com.kamilslesinski.gridlayoutmanager.DataProvider1D;
 

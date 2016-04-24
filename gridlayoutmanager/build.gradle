@@ -29,7 +29,7 @@ ext {
     siteUrl = 'https://github.com/slesinskik/grid-layout-manager'
     gitUrl = 'https://github.com/slesinskik/grid-layout-manager.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 }
 
 android {
@@ -41,7 +41,7 @@ android {
         minSdkVersion 9
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0.1"
     }
     buildTypes {
         release {

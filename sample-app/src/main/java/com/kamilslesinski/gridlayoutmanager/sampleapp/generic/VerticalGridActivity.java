@@ -32,7 +32,7 @@ public class VerticalGridActivity extends AppCompatActivity {
         DisplayMetrics dm = getResources().getDisplayMetrics();
         mGridLayoutManager = new GridLayoutManager(dm);
         mGridLayoutManager.setStripSize(48);
-        mGridLayoutManager.setMaxStripLength(32000);
+        mGridLayoutManager.setStripLength(GridLayoutManager.STRIP_LENGTH_AUTO);
         mGridLayoutManager.setOrientation(GridLayoutManager.ORIENTATION_VERTICAL);
         mGridLayoutManager.setResetListener(new GridLayoutManager.OnResetListener() {
             @Override

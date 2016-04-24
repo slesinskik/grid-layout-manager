@@ -35,7 +35,8 @@ public class GridLayoutManager extends RecyclerView.LayoutManager {
     public static final int ORIENTATION_HORIZONTAL = 0;
     public static final int ORIENTATION_VERTICAL = 1;
 
-    public static final int DEFAULT_STRIP_LENGTH = 2000;
+    public static final int STRIP_LENGTH_DEFAULT = 2000;
+    public static final int STRIP_LENGTH_AUTO = -1;
     public static final int DEFAULT_STRIP_SIZE = 72;
 
     @Retention(RetentionPolicy.SOURCE)
@@ -54,7 +55,7 @@ public class GridLayoutManager extends RecyclerView.LayoutManager {
     /**
      * Maximum strip length in pixels.
      */
-    private int mStripLength = DEFAULT_STRIP_LENGTH;
+    private int mStripLength = STRIP_LENGTH_DEFAULT;
     /**
      * Strip size (either height or width) in pixels.
      */
@@ -93,21 +94,19 @@ public class GridLayoutManager extends RecyclerView.LayoutManager {
         mDataSource = dataSource;
     }
 
-    public void setMaxStripLength(int maxStripLength) {
-        mStripLength = (int) (maxStripLength * mDensity + 0.5f);
+    /**
+     * Sets strip length (either width or height of the view depending on {@link Orientation}). Use {@link #STRIP_LENGTH_AUTO} to calculate length based on items from {@link DataSource}.
+     * Uses {@link #STRIP_LENGTH_DEFAULT} by default.
+     *
+     * @param stripLength length of strips in dp, or {@link #STRIP_LENGTH_AUTO} to calculate strip length dynamically
+     */
+    public void setStripLength(int stripLength) {
+        mDynamicLength = stripLength == STRIP_LENGTH_AUTO;
+        mStripLength = (int) (stripLength * mDensity + 0.5f);
     }
 
     public void setOrientation(@Orientation int orientation) {
         mIsHorizontal = orientation == ORIENTATION_HORIZONTAL;
-    }
-
-    /**
-     * Sets whether {@link GridLayoutManager} will automatically calculate size of strip (either width or height of the view depending on {@link Orientation}), based on available {@link Item Items}.
-     *
-     * @param dynamicStripLength true to calculate strip length dynamically, false to use {@link #DEFAULT_STRIP_LENGTH} or value provided by {@link GridLayoutManager#setMaxStripLength(int)}. Defaults to false.
-     */
-    public void setDynamicStripLength(boolean dynamicStripLength) {
-        mDynamicLength = dynamicStripLength;
     }
 
     @DebugLog

@@ -37,8 +37,7 @@ public class TVGuideGridActivity extends AppCompatActivity {
         mGridLayoutManager = new GridLayoutManager(dm);
         float stripSize = getResources().getDimension(R.dimen.tv_guide_strip_size);
         mGridLayoutManager.setStripSize((int) stripSize);
-        //mGridLayoutManager.setMaxStripLength(32000);
-        mGridLayoutManager.setDynamicStripLength(true);
+        mGridLayoutManager.setStripLength(GridLayoutManager.STRIP_LENGTH_AUTO);
         mGridLayoutManager.setResetListener(new GridLayoutManager.OnResetListener() {
             @Override
             public void onReset(int x, int y) {

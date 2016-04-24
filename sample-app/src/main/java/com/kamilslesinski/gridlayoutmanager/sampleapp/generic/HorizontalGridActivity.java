@@ -32,7 +32,7 @@ public class HorizontalGridActivity extends AppCompatActivity {
         DisplayMetrics dm = getResources().getDisplayMetrics();
         mGridLayoutManager = new GridLayoutManager(dm);
         mGridLayoutManager.setStripSize(48);
-        mGridLayoutManager.setMaxStripLength(32000);
+        mGridLayoutManager.setStripLength(32000);
         mGridLayoutManager.setResetListener(new GridLayoutManager.OnResetListener() {
             @Override
             public void onReset(int x, int y) {

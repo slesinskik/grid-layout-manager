@@ -18,11 +18,11 @@ public class RandomTVGuideDataProvider2D implements DataProvider2D<TVGuideItem> 
 
     public RandomTVGuideDataProvider2D() {
         Random random = new Random();
-        int stripCount = random.nextInt(20) + 10;
+        int stripCount = random.nextInt(100) + 10;
         mGridItems = new TVGuideItem[stripCount][];
         mItemCount = 0;
         for (int i = 0; i < mGridItems.length; i++) {
-            int itemStart = random.nextInt(3) * 30;
+            int itemStart = random.nextInt(3) * 50;
 
             ArrayList<TVGuideItem> items = new ArrayList<>();
             do {

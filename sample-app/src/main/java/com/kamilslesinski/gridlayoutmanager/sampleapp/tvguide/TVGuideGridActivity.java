@@ -35,7 +35,7 @@ public class TVGuideGridActivity extends AppCompatActivity {
     private void initializeGridView() {
         DisplayMetrics dm = getResources().getDisplayMetrics();
         mGridLayoutManager = new GridLayoutManager(dm);
-        int stripSize = (int) (getResources().getDimension(R.dimen.tv_guide_strip_size) / getResources().getDisplayMetrics().density);
+        int stripSize = Math.round(getResources().getDimension(R.dimen.tv_guide_strip_size) / getResources().getDisplayMetrics().density);
         mGridLayoutManager.setStripSize(stripSize);
         mGridLayoutManager.setStripLength(GridLayoutManager.STRIP_LENGTH_AUTO);
         mGridLayoutManager.setResetListener(new GridLayoutManager.OnResetListener() {
